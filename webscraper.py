@@ -11,7 +11,7 @@ def filter_proxies():
     """Obtiene una lista de proxies desde una fuente pública."""
     try:
         warnings.filterwarnings("ignore", category=UserWarning)
-        response = requests.get('https://www.sslproxies.org/', verify=False)
+        response = requests.get('https://www.sslproxies.org/')
         # response = requests.get('https://free-proxy-list.net/', verify=False)
         # response = requests.get('https://proxyscrape.com/', verify=False)
         soup = BeautifulSoup(response.text, "html.parser")
