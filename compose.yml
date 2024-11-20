@@ -1,0 +1,10 @@
+services:
+  webscraper:
+    build:
+      context: .
+    networks:
+      - selenium-grid
+
+networks:
+  selenium-grid:
+    external: true
